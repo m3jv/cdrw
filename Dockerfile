@@ -29,6 +29,6 @@ ENV JAVA_HOME /usr/lib/jvm/default-jvm/
 
 RUN apk --no-cache add ca-certificates \
     mvn package \
-	java -jar src/main/java/cloud/s3.jar src/main/java/cloud/iam.jar src/main/java/cloud/kmsencrpt/jar
+    java -jar src/main/java/cloud/s3.jar src/main/java/cloud/iam.jar src/main/java/cloud/kmsencrpt/jar
     
 WORKDIR /usr
