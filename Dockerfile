@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
   apk 
 
 # Install Java.
-RUN apk --update --no-cache add openjdk7 curl
+RUN apk --update --no-cache add openjdk7
 
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
  && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
@@ -27,15 +27,9 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/default-jvm/
 
-# Define default command.
-CMD ["mvn", "--version"]
-
-FROM jboss/wildfly as builder 
-RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin#70365 --silent
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
-
 RUN apk --no-cache add ca-certificates \
-    docker run -it jboss/wildfly-admin 
+    mvn package \
+	java -jar src/main/java/cloud/s3.jar src/main/java/cloud/iam.jar src/main/java/cloud/kmsencrpt/jar
     
 WORKDIR /usr
 
