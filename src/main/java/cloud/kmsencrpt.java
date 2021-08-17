@@ -14,7 +14,7 @@ public class EncryptDataKey {
         // Encrypt a data key
         //
         // Replace the following fictitious CMK ARN with a valid CMK ID or ARN
-        String keyId = "1234abcd-12ab-34cd-56ef-1234567890ab";
+        String keyId = "{my_key_from_real}";
         ByteBuffer plaintext = ByteBuffer.wrap(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
 
         EncryptRequest req = new EncryptRequest().withKeyId(keyId).withPlaintext(plaintext);
