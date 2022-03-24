@@ -1,6 +1,6 @@
 
 pipeline {
-    agent linuxmvn
+    agent maître
 
     stages {
         stage('Build') {
