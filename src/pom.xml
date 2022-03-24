@@ -29,9 +29,9 @@
                             <transformers>
                                 <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-										<mainClass>cloud.s3</mainClass>
-										<mainClass>cloud.iam</mainClass>
-										<mainClass>cloud.kmsencrpt</mainClass>
+                                                                                <mainClass>cloud.s3</mainClass>
+                                                                                <mainClass>cloud.iam</mainClass>
+                                                                                <mainClass>cloud.kmsencrpt</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
