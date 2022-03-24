@@ -1,6 +1,6 @@
 
 pipeline {
-    agent maître
+    agent any
 
     stages {
         stage('Build') {
