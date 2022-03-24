@@ -10,7 +10,7 @@ pipeline {
 		    docker run -i alpine:3.14
 		    cd cdrw/initial
 		    mvn install 
-		    java -jar target/gs-maven-0.1.0.jar
+		    java -jar target/client-0.1.0.jar
                 '''
             }
         }
