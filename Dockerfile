@@ -6,8 +6,6 @@ ARG USER_HOME_DIR="/root"
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
 RUN apt-get update && apt-get install -y \
-  docker \
-  git \
   curl \
   wget \
   apk 
