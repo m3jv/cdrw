@@ -28,7 +28,7 @@ pipeline {
         }
         stage('BuildArtefactsCheck') {
             steps {
-                sh 'java -jar target/client-0.1.0.jar'
+                sh 'java -jar $WORKSPACE/cdrw/initial/target/client-0.1.0.jar'
             }
         }
         stage('MoveArtefact2Image') {
