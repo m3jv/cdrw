@@ -32,7 +32,7 @@ pipeline {
         }
         stage('MoveArtefact2Image') {
             steps {
-                sh 'docker cp target/client-0.1.0.jar tender_wescoff:/tmp'
+                sh 'docker cp target/client-0.1.0.jar loving_galileo:/tmp'
             }
         }
         
