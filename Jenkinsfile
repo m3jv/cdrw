@@ -43,4 +43,5 @@ pipeline {
         always {
             cleanWs()
         }
+   }   
 }
