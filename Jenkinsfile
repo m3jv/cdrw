@@ -22,7 +22,10 @@ pipeline {
         }
         stage('BuildArtefacts') {
             steps {
-                sh 'cd cdrw/initial && mvn install'
+                sh '''
+                cd cdrw/initial
+                mvn install
+                '''
             }
         }
         stage('BuildArtefactsCheck') {
