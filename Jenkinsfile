@@ -33,7 +33,7 @@ pipeline {
         }
         stage('MoveArtefact2Image') {
             steps {
-                sh 'docker cp target/client-0.1.0.jar loving_galileo:/tmp'
+                sh 'docker cp $WORKSPACE/cdrw/initial/target/client-0.1.0.jar loving_galileo:/tmp'
             }
         }      
     }
